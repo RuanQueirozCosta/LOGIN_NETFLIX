@@ -1,0 +1,245 @@
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    border: none;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    background-image: url(imagens/background.jpg);
+    position: relative;
+    background-repeat: no-repeat;
+    background-image: cover;
+}
+
+body::before{
+    content: '';
+    background-color: rgba(0, 0, 0, 0.5);
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+header > img{
+    height: 45px;
+    width: 167px;
+    margin: 25px 40px;
+    position: relative;
+}
+
+main{
+    display: flex;
+    height: 100%;
+    width: 100%;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+}
+
+main > div.card{
+    height: 650px;
+    width: 450px;
+    background-color: rgba(0, 0, 0, 0.8);
+    border-radius: 5px;
+    padding: 70px;
+}
+
+main > div.card > form >div.titulo > h2{
+    color: #ffffff;
+    font-size: 30px;
+    font-weight: 600;
+    margin-bottom: 12px;
+}
+
+main > div.card > form > div.email > input{
+    background-color: #333333;
+    color:  #b6b4b4;
+    font-size: 17px;
+    height: 50px;
+    width: 100%;
+    border-radius: 5px;
+    padding-left: 20px;
+    margin: 12px 0px 8px 0px;
+    outline: none;
+}
+main > div.card > form > div.email > input:focus,
+main > div.card > form > div.email > input:required{
+    border-bottom: 1px solid #e09303;
+}
+
+
+main > div.card > form > div.senha > input{
+    background-color: #333333;
+    color: #b6b4b4;
+    font-size: 17px;
+    height: 50px;
+    width: 100%;
+    border-radius: 5px;
+    padding-left: 20px;
+    margin: 8px 0px 8px 0px;
+    outline: none;
+}
+
+main > div.card > form > div.senha > input:focus,
+main > div.card > form > div.senha > input:required{
+    border-bottom: 1px solid #e09303;
+}
+
+main > div.card > form > div.submit > button{
+    height: 50px;
+    width: 100%;
+    border-radius: 5px;
+    background-color: #ff0000;
+    color: #fff;
+    font-weight: bold;
+    margin: 30px 0px 10px 0px;
+}
+
+main > div.card > form > div.extra{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 70px;
+}
+
+main > div.card > form > div.extra > div.checkbox{
+    color: #6b6b6b;
+    display: flex;
+}
+
+main > div.card > form > div.extra > div.ajuda > a{
+    color: #6b6b6b;
+    font-size: 15px;
+}
+
+main > div.card > form > div.extra > div.ajuda > a:hover{
+    text-decoration: underline;
+}
+
+main > div.card >  div.mais > p{
+    color: #6b6b6b;
+    margin-bottom: 15px;
+}
+
+main > div.card >  div.mais > p >  a{
+    color: #fff;
+    font-weight: 500;
+}
+
+main > div.card >  div.mais > p >  a:hover{
+    text-decoration: underline;
+}
+
+main > div.card >  div.mais > p:nth-child(2){
+    font-size: 12px;
+}
+
+main > div.card >  div.mais > p:nth-child(2) > a{
+    color: #0071EB;
+}
+
+footer{
+    height: 265px;
+    width: 100%;
+    margin-top: 100px;
+    background-color: rgba(0, 0, 0, 0.8);
+    padding: 50px 100px;
+}
+
+footer > h3{
+    color: #b6b4b4;
+    margin: 10px ;
+    font-weight: 300;
+}
+
+footer > ul{
+    columns: 4;
+    color: #b6b4b4;
+    margin: 20px 10px;
+}
+
+footer > ul > li{
+    list-style: none;
+    font-size: 14px;
+    margin-bottom: 30px;
+}
+
+@media (max-width: 740px) {
+    body{
+        background-image: none;
+        background-color: #000;
+    }
+
+    main > div.card{
+        height: 550px;
+        width: 100%;
+        background-color: rgba(0, 0, 0, 0.8);
+        border-radius: 5px;
+        padding: 20px;
+        border-bottom: 2px solid #6b6b6b;
+        margin: 0;
+    }
+
+    header > img{
+        height: 45px;
+        width: 167px;
+        margin: 15px 15px;
+        position: relative;
+    }
+
+    footer{
+        height: 180px;
+        width: 100%;
+        background-color: rgba(0, 0, 0, 0.8);
+        position: relative;
+        margin: 0;
+        padding: 10px 5px;
+    }
+
+    footer > h3{
+        color: #b6b4b4;
+        font-weight: 300;
+        font-size: 15px;
+    }
+
+
+    footer > ul{
+        columns: 3;
+        color: #b6b4b4;
+        margin-bottom: 100px;
+    }
+
+    footer > ul > li{
+        list-style: none;
+        font-size: 14px;
+        margin-bottom: 20px;
+    }
+        
+}
+
+@media (max-width: 400px) {
+    header > img{
+        height: 20px;
+        width: 80px;
+        margin: 20px 15px;
+        position: relative;
+    }
+
+
+    footer > ul{
+        columns: 2;
+        color: #b6b4b4;
+        
+    }
+}
